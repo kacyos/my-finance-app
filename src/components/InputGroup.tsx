@@ -5,6 +5,7 @@ interface TInputGroup {
   inputName?: string;
   inputComplete?: string;
   placeholder?: string;
+  onChange?:any
 }
 
 export default function InputGroup({
@@ -14,6 +15,7 @@ export default function InputGroup({
   inputName,
   inputComplete,
   placeholder,
+  onChange,
 }: TInputGroup) {
   return (
     <div className="mt-2">
@@ -28,6 +30,7 @@ export default function InputGroup({
         required
         className="input full"
         placeholder={placeholder}
+        onChange={onChange}
       />
     </div>
   );

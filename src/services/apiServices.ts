@@ -5,14 +5,23 @@ const config = {
   responseType: "json",
 };
 
-async function login(name: string, password: string) {
-  const response = await api.get("/users", {
+interface IUser {
+  id: number;
+  user: string;
+  password: string;
+}
+
+async function login(name: string, password: string):Promise<IUser[]> {
+  const response:IUser[] = await api.get("/users", {
+    headers: { "X-Requested-With": "XMLHttpRequest" },
+    responseType: "json",
     params: {
       name: name,
       password: password,
     },
   });
-  console.log(response.data);
+
+  return response;
 }
 
 export { login };
