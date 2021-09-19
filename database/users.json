@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "cacio",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "title": "json-server-2",
+      "author": "typicode"
+    }
+  ],
+
+  "inputs": [
+    {
+      "id": 1,
+      "mercado": 500,
+      "userId": 1
+    }
+  ],
+
+  "outputs": [
+    {
+      "id": 2,
+      "carro": 300,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "carro": 300,
+      "userId": 1
+    }
+  ]
+}
